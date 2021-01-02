@@ -98,7 +98,7 @@ int main()
 		
 	}
 	system("cls");
-	cout << x+1 << "," << y+1 << endl;
+	cout << x + 1 << "," << y + 1 << endl;
 	if (hasLost) {
 		cout << "Game over!";
 	}
