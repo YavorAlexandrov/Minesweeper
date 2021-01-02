@@ -69,7 +69,7 @@ int main()
 		cin >> x >> y;
 		x--;
 		y--;
-		if ((x < 0 || x>9) || (y < 0 || y>9)) {
+		if ((x < 0 || x > 9) || (y < 0 || y > 9)) {
 			cout << "Invalid coordinates!";
 			std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 			continue;
