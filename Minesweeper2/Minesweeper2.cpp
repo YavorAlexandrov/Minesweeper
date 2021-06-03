@@ -29,7 +29,7 @@ int main()
 		cin >> n;
 	}
 	int minesAmount;
-	cout << "Enter the amout of mines [1,3*size]: ";
+	cout << "Enter the amout of mines [1,"<<3*n <<"]: ";
 	cin >> minesAmount;
 	while (minesAmount < 1 || minesAmount>3 * n) {
 		cout << "Incorrect amount! Try again: ";
@@ -65,7 +65,7 @@ int main()
 		printCurrentField(overlayingField, playingField, isOpenedMatrix, n);
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-		cin.getline(command, 7, ' ');
+		cin.get(command, 7, ' ');
 		cin >> x >> y;
 		x--;
 		y--;
@@ -134,6 +134,7 @@ void printMatrix(const char matrix[SIZE][SIZE], int n) {
 }
 
 int generateCoordinate(int n) {
+	srand(time(NULL));
 	return rand()%n;
 }
 
